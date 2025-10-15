@@ -1,7 +1,6 @@
 import { GeometryData, DistanceResult } from "../../client/src/lib/stores/useGeometry";
 
-// Hardcoded OpenRouter API key as requested
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 export type DistanceMode = 'line-line' | 'plane-plane' | 'line-plane';
